@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: rgb(4, 22, 75);
+        width: 100%;
+        height: 600px;
+        padding-top: 200px;
+        animation: bg 10s infinite;
+      }
+      @keyframes bg {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      .root {
+        height: 150px;
+        width: 150px;
+        position: relative;
+        margin: auto;
+      }
+      span {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        transform: rotate(calc(18deg * (var(--i))));
+        border: solid red;
+        animation: love 2s infinite;
+      }
+
+      @keyframes love {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(calc(18deg * (var(--i))));
+        }
+      }
+      span::before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: cyan;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="root">
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+      </div>
+    </div>
+  </body>
+</html>
